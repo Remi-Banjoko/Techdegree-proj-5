@@ -3,7 +3,7 @@ baguetteBox.run('.gallery');
  document.getElementById("search").addEventListener("keyup", myFunction);
 
 function myFunction() {
-  var user_input = toString(document.getElementById("search"));
+  var user_input = document.getElementById("search").value;
   var filter =  user_input.toUpperCase();
   var gallery = document.getElementById("image_gallery");
   var gallery_entries= gallery.getElementsByTagName('li');
