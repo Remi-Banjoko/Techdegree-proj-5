@@ -15,9 +15,9 @@ function myFunction() {
 
     var a = gallery_entries[i].getElementsByTagName("a")[0];
     console.log(a.getAttribute("data-caption"));
-    var txtValue = a.getAttribute("data-caption");
+    var txtValue = a.getAttribute("data-caption") || a.getAttribute("alt");
     if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        gallery_entries[i].style.display = "initial";
+        gallery_entries[i].style.display = "list-item";
     } else {
         gallery_entries[i].style.display = "none";
     }
